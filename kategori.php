@@ -10,6 +10,8 @@ $result = mysqli_query($link, $query);
 
 ?>
 
+<button><a href="kategori_create.php">Create</a></button><br>
+
 <table class="table table-hover">
     <thead>
       <tr>
