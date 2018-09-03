@@ -11,7 +11,7 @@ $result = mysqli_query($link, $query);
 ?>
 
 <button><a href="barang_create.php">Create</a></button><br>
-
+<br>
 <table class="table table-hover">
     <thead>
       <tr>
@@ -31,8 +31,8 @@ $result = mysqli_query($link, $query);
         <td><?php echo $row['modal'] + $row['untung'] ?></td>
         <td>
             <button><a href="barang_update_stok.php?id=<?php echo $row['id'] ?>">Update Stok</a></button>
-            <button><a href="barang_update.php?id=<?php echo $row['id'] ?>">Edit</a></button>
-            <button><a href="">Delete</a></button>
+            <button><a href="barang_edit.php?id=<?php echo $row['id'] ?>">Edit</a></button>
+            <button><a href="barang_delete.php?id=<?php echo $row['id'] ?>">Delete</a></button>
         </td>
       </tr>
     </tbody>
