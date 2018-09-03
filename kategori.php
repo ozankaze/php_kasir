@@ -11,12 +11,13 @@ $result = mysqli_query($link, $query);
 ?>
 
 <button><a href="kategori_create.php">Create</a></button><br>
-
+<br>
 <table class="table table-hover">
     <thead>
       <tr>
         <th scope="col">Id</th>
         <th scope="col">Nama Barang</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -24,6 +25,10 @@ $result = mysqli_query($link, $query);
       <tr>
         <td><?php echo $row['id'] ?></td>
         <td><?php echo $row['nama_kategori'] ?></td>
+        <td>
+            <button><a href="kategori_edit.php?id=<?php echo $row['id'] ?>">Edit</a></button>
+            <button><a href="kategori_delete.php?id=<?php echo $row['id'] ?>">Delete</a></button>
+        </td>
       </tr>
     </tbody>
     <?php endwhile ?>
