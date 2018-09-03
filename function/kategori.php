@@ -16,3 +16,19 @@ function create_kategori( $kategori )
         header("Location: kategori.php");
     }
 }
+
+function kategori_edit( $kategori, $id )
+{
+    global $link;
+
+    $kategori = mysqli_real_escape_string($link, $kategori);
+
+    $result = "UPDATE `kategori_barang` SET `nama_kategori` = " . " '".$_POST['nama_kategori']."' " . " WHERE id='$id' ";
+
+    // var_dump($result);die();
+
+    if( mysqli_query($link, $result) ) 
+    {
+        header("Location: kategori.php");
+    }
+}
